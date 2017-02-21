@@ -87,8 +87,8 @@ class Board:NSObject {
         var angles_distances = [(Int,CGFloat)]()
         if dist == 2 * r {
             let ang = angle(p1: CGPoint(x:x1,y:y1), p2: CGPoint(x:x2,y:y2))
-            var ang1 = ang.subtracting(CGFloat(M_PI_4))
-            var ang2 = ang.adding(CGFloat(M_PI_4))
+            var ang1 = ang - CGFloat(M_PI_4)
+            var ang2 = ang + CGFloat(M_PI_4)
             ang1 = convertAngle(angle: ang1)
             ang2 = convertAngle(angle: ang2)
             

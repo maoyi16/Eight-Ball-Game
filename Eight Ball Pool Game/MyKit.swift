@@ -40,9 +40,9 @@ func length(vector: CGVector) -> CGFloat {
 
 func convertAngle(angle:CGFloat) -> CGFloat {
     if angle > CGFloat(M_PI) {
-        return angle.subtracting(CGFloat(2 * M_PI))
+        return angle - CGFloat(2 * M_PI)
     } else if angle < CGFloat(-M_PI) {
-        return angle.adding(CGFloat(2 * M_PI))
+        return angle + CGFloat(2 * M_PI)
     } else {
         return angle
     }

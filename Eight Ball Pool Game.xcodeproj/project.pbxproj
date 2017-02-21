@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		480A99E61E50CE3800CAC431 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99E51E50CE3800CAC431 /* Player.swift */; };
+		480A99F61E512ACF00CAC431 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 480A99F51E512ACF00CAC431 /* MenuScene.sks */; };
+		480A99FA1E512C9F00CAC431 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99F91E512C9F00CAC431 /* MenuScene.swift */; };
+		48202BFD1E351906001755DE /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48202BFC1E351906001755DE /* GameConstants.swift */; };
+		482750391E36E1C30042E804 /* Cue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482750381E36E1C30042E804 /* Cue.swift */; };
+		4827503D1E3769060042E804 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827503C1E3769060042E804 /* Pocket.swift */; };
+		482B131D1E59EA8700A4A6A4 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B131C1E59EA8700A4A6A4 /* Move.swift */; };
+		482B13211E5A083900A4A6A4 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B13201E5A083900A4A6A4 /* Board.swift */; };
+		482B13291E5A401E00A4A6A4 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B13281E5A401E00A4A6A4 /* Tests.swift */; };
+		482B13301E5A41A500A4A6A4 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF507E1E366A4F0074AD9C /* Ball.swift */; };
+		482B13311E5A41A500A4A6A4 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B13201E5A083900A4A6A4 /* Board.swift */; };
+		482B13321E5A432000A4A6A4 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827503C1E3769060042E804 /* Pocket.swift */; };
+		482B13331E5A432000A4A6A4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99E51E50CE3800CAC431 /* Player.swift */; };
+		482B13341E5A432000A4A6A4 /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48202BFC1E351906001755DE /* GameConstants.swift */; };
+		482B13351E5A432000A4A6A4 /* MyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0EF661E5801E700FCCC5C /* MyKit.swift */; };
+		482CEE111E5A83B100314843 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B131C1E59EA8700A4A6A4 /* Move.swift */; };
+		482CEE121E5A83FA00314843 /* Cue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482750381E36E1C30042E804 /* Cue.swift */; };
+		482CEE141E5B47D300314843 /* RealBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CEE131E5B47D300314843 /* RealBall.swift */; };
+		482CEE161E5B47E400314843 /* FakeBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CEE151E5B47E400314843 /* FakeBall.swift */; };
+		483F8A811E34235500C8A3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483F8A801E34235500C8A3B7 /* AppDelegate.swift */; };
+		483F8A831E34235500C8A3B7 /* PoolScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 483F8A821E34235500C8A3B7 /* PoolScene.sks */; };
+		483F8A871E34235500C8A3B7 /* PoolScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483F8A861E34235500C8A3B7 /* PoolScene.swift */; };
+		483F8A891E34235500C8A3B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483F8A881E34235500C8A3B7 /* GameViewController.swift */; };
+		483F8A8C1E34235500C8A3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483F8A8A1E34235500C8A3B7 /* Main.storyboard */; };
+		483F8A911E34235500C8A3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483F8A8F1E34235500C8A3B7 /* LaunchScreen.storyboard */; };
+		487573D01E5B5C40004AC4E1 /* RealBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CEE131E5B47D300314843 /* RealBall.swift */; };
+		487573D11E5B5C40004AC4E1 /* FakeBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CEE151E5B47E400314843 /* FakeBall.swift */; };
+		487573D21E5BE8D5004AC4E1 /* PoolScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483F8A861E34235500C8A3B7 /* PoolScene.swift */; };
+		487573D31E5BE92F004AC4E1 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99F91E512C9F00CAC431 /* MenuScene.swift */; };
+		48AE3F491E58196B005DEB58 /* MyActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 48AE3F481E58196B005DEB58 /* MyActions.sks */; };
+		48AF507F1E366A4F0074AD9C /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF507E1E366A4F0074AD9C /* Ball.swift */; };
+		48B498D71E3450B6002A48E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B498D61E3450B6002A48E7 /* Assets.xcassets */; };
+		48F0EF671E5801E700FCCC5C /* MyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0EF661E5801E700FCCC5C /* MyKit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		480A99E51E50CE3800CAC431 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		480A99F51E512ACF00CAC431 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		480A99F91E512C9F00CAC431 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		48202BFC1E351906001755DE /* GameConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
+		482750381E36E1C30042E804 /* Cue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cue.swift; sourceTree = "<group>"; };
+		4827503C1E3769060042E804 /* Pocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
+		482B131C1E59EA8700A4A6A4 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		482B13201E5A083900A4A6A4 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		482B13261E5A401E00A4A6A4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		482B13281E5A401E00A4A6A4 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		482B132A1E5A401E00A4A6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		482CEE131E5B47D300314843 /* RealBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealBall.swift; sourceTree = "<group>"; };
+		482CEE151E5B47E400314843 /* FakeBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeBall.swift; sourceTree = "<group>"; };
+		483F8A7D1E34235500C8A3B7 /* Eight Ball Pool Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eight Ball Pool Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		483F8A801E34235500C8A3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		483F8A821E34235500C8A3B7 /* PoolScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PoolScene.sks; sourceTree = "<group>"; };
+		483F8A861E34235500C8A3B7 /* PoolScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolScene.swift; sourceTree = "<group>"; };
+		483F8A881E34235500C8A3B7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		483F8A8B1E34235500C8A3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		483F8A901E34235500C8A3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		483F8A921E34235500C8A3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48AE3F481E58196B005DEB58 /* MyActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyActions.sks; path = ../MyActions.sks; sourceTree = "<group>"; };
+		48AF507E1E366A4F0074AD9C /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		48B498D61E3450B6002A48E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48F0EF661E5801E700FCCC5C /* MyKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyKit.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		482B13231E5A401E00A4A6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		483F8A7A1E34235500C8A3B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		480A99E91E510AF000CAC431 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48AE3F481E58196B005DEB58 /* MyActions.sks */,
+				48B498D61E3450B6002A48E7 /* Assets.xcassets */,
+				483F8A881E34235500C8A3B7 /* GameViewController.swift */,
+				483F8A801E34235500C8A3B7 /* AppDelegate.swift */,
+				48202BFC1E351906001755DE /* GameConstants.swift */,
+				483F8A8A1E34235500C8A3B7 /* Main.storyboard */,
+				483F8A8F1E34235500C8A3B7 /* LaunchScreen.storyboard */,
+				483F8A921E34235500C8A3B7 /* Info.plist */,
+				48F0EF661E5801E700FCCC5C /* MyKit.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		482B13271E5A401E00A4A6A4 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				482B13281E5A401E00A4A6A4 /* Tests.swift */,
+				482B132A1E5A401E00A4A6A4 /* Info.plist */,
+			);
+			name = UnitTests;
+			path = angleTest;
+			sourceTree = "<group>";
+		};
+		483F8A741E34235500C8A3B7 = {
+			isa = PBXGroup;
+			children = (
+				483F8A7F1E34235500C8A3B7 /* Eight Ball Pool Game */,
+				482B13271E5A401E00A4A6A4 /* UnitTests */,
+				483F8A7E1E34235500C8A3B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		483F8A7E1E34235500C8A3B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				483F8A7D1E34235500C8A3B7 /* Eight Ball Pool Game.app */,
+				482B13261E5A401E00A4A6A4 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		483F8A7F1E34235500C8A3B7 /* Eight Ball Pool Game */ = {
+			isa = PBXGroup;
+			children = (
+				48AF50801E367F5D0074AD9C /* Scenes */,
+				48AF507D1E3669EC0074AD9C /* Models */,
+				480A99E91E510AF000CAC431 /* Supporting Files */,
+			);
+			path = "Eight Ball Pool Game";
+			sourceTree = "<group>";
+		};
+		48AF507D1E3669EC0074AD9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				482B131C1E59EA8700A4A6A4 /* Move.swift */,
+				48AF507E1E366A4F0074AD9C /* Ball.swift */,
+				482CEE131E5B47D300314843 /* RealBall.swift */,
+				482CEE151E5B47E400314843 /* FakeBall.swift */,
+				482750381E36E1C30042E804 /* Cue.swift */,
+				4827503C1E3769060042E804 /* Pocket.swift */,
+				480A99E51E50CE3800CAC431 /* Player.swift */,
+				482B13201E5A083900A4A6A4 /* Board.swift */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		48AF50801E367F5D0074AD9C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				483F8A821E34235500C8A3B7 /* PoolScene.sks */,
+				483F8A861E34235500C8A3B7 /* PoolScene.swift */,
+				480A99F51E512ACF00CAC431 /* MenuScene.sks */,
+				480A99F91E512C9F00CAC431 /* MenuScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		482B13251E5A401E00A4A6A4 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 482B132D1E5A401E00A4A6A4 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				482B13221E5A401E00A4A6A4 /* Sources */,
+				482B13231E5A401E00A4A6A4 /* Frameworks */,
+				482B13241E5A401E00A4A6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = angleTest;
+			productReference = 482B13261E5A401E00A4A6A4 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		483F8A7C1E34235500C8A3B7 /* Eight Ball Pool Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483F8AAB1E34235500C8A3B7 /* Build configuration list for PBXNativeTarget "Eight Ball Pool Game" */;
+			buildPhases = (
+				483F8A791E34235500C8A3B7 /* Sources */,
+				483F8A7A1E34235500C8A3B7 /* Frameworks */,
+				483F8A7B1E34235500C8A3B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Eight Ball Pool Game";
+			productName = "Eight Ball Pool Game";
+			productReference = 483F8A7D1E34235500C8A3B7 /* Eight Ball Pool Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		483F8A751E34235500C8A3B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Yi Mao";
+				TargetAttributes = {
+					482B13251E5A401E00A4A6A4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6855GM9857;
+						ProvisioningStyle = Automatic;
+					};
+					483F8A7C1E34235500C8A3B7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6855GM9857;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 483F8A781E34235500C8A3B7 /* Build configuration list for PBXProject "Eight Ball Pool Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 483F8A741E34235500C8A3B7;
+			productRefGroup = 483F8A7E1E34235500C8A3B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				483F8A7C1E34235500C8A3B7 /* Eight Ball Pool Game */,
+				482B13251E5A401E00A4A6A4 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		482B13241E5A401E00A4A6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		483F8A7B1E34235500C8A3B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483F8A8C1E34235500C8A3B7 /* Main.storyboard in Resources */,
+				480A99F61E512ACF00CAC431 /* MenuScene.sks in Resources */,
+				48AE3F491E58196B005DEB58 /* MyActions.sks in Resources */,
+				483F8A831E34235500C8A3B7 /* PoolScene.sks in Resources */,
+				483F8A911E34235500C8A3B7 /* LaunchScreen.storyboard in Resources */,
+				48B498D71E3450B6002A48E7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		482B13221E5A401E00A4A6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				487573D31E5BE92F004AC4E1 /* MenuScene.swift in Sources */,
+				487573D21E5BE8D5004AC4E1 /* PoolScene.swift in Sources */,
+				487573D01E5B5C40004AC4E1 /* RealBall.swift in Sources */,
+				487573D11E5B5C40004AC4E1 /* FakeBall.swift in Sources */,
+				482CEE121E5A83FA00314843 /* Cue.swift in Sources */,
+				482CEE111E5A83B100314843 /* Move.swift in Sources */,
+				482B13321E5A432000A4A6A4 /* Pocket.swift in Sources */,
+				482B13331E5A432000A4A6A4 /* Player.swift in Sources */,
+				482B13341E5A432000A4A6A4 /* GameConstants.swift in Sources */,
+				482B13351E5A432000A4A6A4 /* MyKit.swift in Sources */,
+				482B13301E5A41A500A4A6A4 /* Ball.swift in Sources */,
+				482B13311E5A41A500A4A6A4 /* Board.swift in Sources */,
+				482B13291E5A401E00A4A6A4 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		483F8A791E34235500C8A3B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4827503D1E3769060042E804 /* Pocket.swift in Sources */,
+				483F8A871E34235500C8A3B7 /* PoolScene.swift in Sources */,
+				482750391E36E1C30042E804 /* Cue.swift in Sources */,
+				482B131D1E59EA8700A4A6A4 /* Move.swift in Sources */,
+				48202BFD1E351906001755DE /* GameConstants.swift in Sources */,
+				48AF507F1E366A4F0074AD9C /* Ball.swift in Sources */,
+				482B13211E5A083900A4A6A4 /* Board.swift in Sources */,
+				482CEE141E5B47D300314843 /* RealBall.swift in Sources */,
+				48F0EF671E5801E700FCCC5C /* MyKit.swift in Sources */,
+				482CEE161E5B47E400314843 /* FakeBall.swift in Sources */,
+				483F8A891E34235500C8A3B7 /* GameViewController.swift in Sources */,
+				480A99FA1E512C9F00CAC431 /* MenuScene.swift in Sources */,
+				480A99E61E50CE3800CAC431 /* Player.swift in Sources */,
+				483F8A811E34235500C8A3B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		483F8A8A1E34235500C8A3B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				483F8A8B1E34235500C8A3B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		483F8A8F1E34235500C8A3B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				483F8A901E34235500C8A3B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		482B132E1E5A401E00A4A6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6855GM9857;
+				INFOPLIST_FILE = angleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymao.angleTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		482B132F1E5A401E00A4A6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6855GM9857;
+				INFOPLIST_FILE = angleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymao.angleTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		483F8AA91E34235500C8A3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		483F8AAA1E34235500C8A3B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		483F8AAC1E34235500C8A3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6855GM9857;
+				INFOPLIST_FILE = "Eight Ball Pool Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ymao.Eight-Ball-Pool-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		483F8AAD1E34235500C8A3B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6855GM9857;
+				INFOPLIST_FILE = "Eight Ball Pool Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ymao.Eight-Ball-Pool-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		482B132D1E5A401E00A4A6A4 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				482B132E1E5A401E00A4A6A4 /* Debug */,
+				482B132F1E5A401E00A4A6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483F8A781E34235500C8A3B7 /* Build configuration list for PBXProject "Eight Ball Pool Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				483F8AA91E34235500C8A3B7 /* Debug */,
+				483F8AAA1E34235500C8A3B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483F8AAB1E34235500C8A3B7 /* Build configuration list for PBXNativeTarget "Eight Ball Pool Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				483F8AAC1E34235500C8A3B7 /* Debug */,
+				483F8AAD1E34235500C8A3B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 483F8A751E34235500C8A3B7 /* Project object */;
+}

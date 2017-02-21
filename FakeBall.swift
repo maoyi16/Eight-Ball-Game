@@ -13,7 +13,7 @@ import GameplayKit
 class FakeBall: Ball {
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return FakeBall(posX: node.position.x, posY: node.position.y, color: color, withNode: false)
+        return FakeBall(posX: position.x, posY: position.y, color: color, withNode: false)
     }
     
     var description: String {

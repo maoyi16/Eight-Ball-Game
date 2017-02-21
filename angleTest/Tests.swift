@@ -38,8 +38,10 @@ class Tests: XCTestCase {
         let board = Board(difficulty: .Hard)
         board.remainingBalls.append(contentsOf:[b1,b2,b3] as [Ball])
         board.cueBall = b1
-        board.currentPlayer = Player(id: .First, isAI: true)
-        board.currentPlayer.ballColor = .Blue
+        board.currentPlayer = Player(id: .First, isAI: false)
+        board.currentPlayer.opponent = Player(id: .Second, isAI: true)
+        board.currentPlayer.opponent.opponent = board.currentPlayer
+//        board.currentPlayer.ballColor = .Blue
         print(board.validAngles())
     }
     
@@ -50,7 +52,9 @@ class Tests: XCTestCase {
         let board = Board(difficulty: .Hard)
         board.remainingBalls.append(contentsOf: [b1,b2,b2.copy() as! Ball,b3])
         board.cueBall = b1
-        board.currentPlayer = Player(id: .First, isAI: true)
+        board.currentPlayer = Player(id: .First, isAI: false)
+        board.currentPlayer.opponent = Player(id: .Second, isAI: true)
+        board.currentPlayer.opponent.opponent = board.currentPlayer
         board.currentPlayer.ballColor = .Blue
         let copy = board.copy()
         print(board)

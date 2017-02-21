@@ -322,19 +322,6 @@ extension Board: GKGameModel {
         let deltaY = b2.position.y - b1.position.y
         let unitContactX = deltaX / d
         let unitContactY = deltaY / d
-        
-        //        double b1_i = b1.getXVelocity()*unitContactX + b1.getYVelocity()*
-        //        unitContactY;
-        //        double b2_i = b2.getXVelocity()*unitContactX + b2.getYVelocity()*
-        //        unitContactY;
-        //
-        //        double b1_f = b2_i;
-        //        double b2_f = b1_i;
-        //
-        //        b1.setXVelocity(b1.getXVelocity() +  unitContactX*(b1_f - b1_i));
-        //        b1.setYVelocity(b1.getYVelocity() +  unitContactY*(b1_f - b1_i));
-        //        b2.setXVelocity(b2.getXVelocity() +  unitContactX*(b2_f - b2_i));
-        //        b2.setYVelocity(b2.getYVelocity() +  unitContactY*(b2_f - b2_i));
         let b1Impluse = b1.velocity.dx * unitContactX + b1.velocity.dy * unitContactY
         let b2Impluse = b2.velocity.dx * unitContactX + b2.velocity.dy * unitContactY
         let impluseDiff = b2Impluse - b1Impluse

@@ -10,6 +10,7 @@
 		480A99E61E50CE3800CAC431 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99E51E50CE3800CAC431 /* Player.swift */; };
 		480A99F61E512ACF00CAC431 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 480A99F51E512ACF00CAC431 /* MenuScene.sks */; };
 		480A99FA1E512C9F00CAC431 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99F91E512C9F00CAC431 /* MenuScene.swift */; };
+		48181EF21E5C98BE00CA3A64 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99F91E512C9F00CAC431 /* MenuScene.swift */; };
 		48202BFD1E351906001755DE /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48202BFC1E351906001755DE /* GameConstants.swift */; };
 		482750391E36E1C30042E804 /* Cue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482750381E36E1C30042E804 /* Cue.swift */; };
 		4827503D1E3769060042E804 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4827503C1E3769060042E804 /* Pocket.swift */; };
@@ -35,7 +36,6 @@
 		487573D01E5B5C40004AC4E1 /* RealBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CEE131E5B47D300314843 /* RealBall.swift */; };
 		487573D11E5B5C40004AC4E1 /* FakeBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CEE151E5B47E400314843 /* FakeBall.swift */; };
 		487573D21E5BE8D5004AC4E1 /* PoolScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483F8A861E34235500C8A3B7 /* PoolScene.swift */; };
-		487573D31E5BE92F004AC4E1 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480A99F91E512C9F00CAC431 /* MenuScene.swift */; };
 		48AE3F491E58196B005DEB58 /* MyActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 48AE3F481E58196B005DEB58 /* MyActions.sks */; };
 		48AF507F1E366A4F0074AD9C /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF507E1E366A4F0074AD9C /* Ball.swift */; };
 		48B498D71E3450B6002A48E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B498D61E3450B6002A48E7 /* Assets.xcassets */; };
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487573D31E5BE92F004AC4E1 /* MenuScene.swift in Sources */,
+				48181EF21E5C98BE00CA3A64 /* MenuScene.swift in Sources */,
 				487573D21E5BE8D5004AC4E1 /* PoolScene.swift in Sources */,
 				487573D01E5B5C40004AC4E1 /* RealBall.swift in Sources */,
 				487573D11E5B5C40004AC4E1 /* FakeBall.swift in Sources */,

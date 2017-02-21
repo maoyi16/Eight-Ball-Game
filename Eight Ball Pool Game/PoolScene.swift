@@ -173,7 +173,7 @@ class PoolScene: SKScene {
         var ballPositions: [Int]!
         while true {
             ballPositions = GKRandomSource().arrayByShufflingObjects(in: Array(1...15)) as! [Int]
-            if ballPositions[14] != 1 {
+            if ballPositions[7] != 1 {
                 break
             }
         }

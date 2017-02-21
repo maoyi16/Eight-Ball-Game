@@ -97,8 +97,14 @@ class Board:NSObject {
                 ang1 = ang2
                 ang2 = t
             }
-            for a in lround(Double(GLKMathRadiansToDegrees(Float(ang1))))...lround(Double(GLKMathRadiansToDegrees(Float(ang2)))) {
-                angles_distances.append((a,dist))
+            
+            let  lower = lround(Double(GLKMathRadiansToDegrees(Float(ang1)))) + 1
+            let  upper = lround(Double(GLKMathRadiansToDegrees(Float(ang2)))) - 1
+            if lower <= upper {
+                for a in lower...upper {
+                    angles_distances.append((a,dist))
+                }
+                
             }
             
         } else {
@@ -119,16 +125,22 @@ class Board:NSObject {
             var ang1 = angle(p1: CGPoint(x:x1,y:y1), p2: CGPoint(x:xsol1,y:ysol1))
             var ang2 = angle(p1: CGPoint(x:x1,y:y1), p2: CGPoint(x:xsol2,y:ysol2))
             
-            if ang2 < ang1 {
-                let t = ang1
-                ang1 = ang2
-                ang2 = t
-            }
-            
-            for a in lround(Double(GLKMathRadiansToDegrees(Float(ang1))))...lround(Double(GLKMathRadiansToDegrees(Float(ang2)))) {
-                let d = computeDistance(ball1: ball1, ball2: ball2, angle: CGFloat(GLKMathDegreesToRadians(Float(a))))
-                if !d.isNaN {
-                    angles_distances.append((a,d))
+            if !ang1.isNaN && !ang2.isNaN {
+                if ang2 < ang1 {
+                    let t = ang1
+                    ang1 = ang2
+                    ang2 = t
+                }
+                
+                let  lower = lround(Double(GLKMathRadiansToDegrees(Float(ang1)))) + 1
+                let  upper = lround(Double(GLKMathRadiansToDegrees(Float(ang2)))) - 1
+                if lower <= upper {
+                    for a in lower...upper {
+                        let d = computeDistance(ball1: ball1, ball2: ball2, angle: CGFloat(GLKMathDegreesToRadians(Float(a))))
+                        if !d.isNaN {
+                            angles_distances.append((a,d))
+                        }
+                    }
                 }
             }
             
@@ -157,7 +169,7 @@ class Board:NSObject {
         }
         for invalidAngles_distance in invalidAngles_distances {
             if let d = dict[invalidAngles_distance.0] {
-                if invalidAngles_distance.distance.isLessThanOrEqualTo(d) {
+                if invalidAngles_distance.distance < d {
                     dict.removeValue(forKey: invalidAngles_distance.0)
                 }
             }
@@ -166,11 +178,12 @@ class Board:NSObject {
         for tuple in dict {
             result.append((angle:CGFloat(GLKMathDegreesToRadians(Float(tuple.key))), distance: tuple.value))
         }
-        //        return result
         
         var selectedResult:[(angle:CGFloat, distance:CGFloat)] = []
         var idx = 0
+        print("Finish computing valid angles and distances")
         while idx < result.count {
+            print("\(idx): Valid Angle = \(GLKMathRadiansToDegrees(Float(result[idx].angle)))")
             selectedResult.append(result[idx])
             idx += remainingBalls.count
         }
@@ -286,12 +299,12 @@ extension Board: GKGameModel {
             if let ball = ball as? FakeBall {
                 if ball.position.x - GameConstants.BallRadius < Board.boardLeft && ball.velocity.dx < 0 ||
                     ball.position.x + GameConstants.BallRadius > Board.boardRight && ball.velocity.dx > 0 {
-                    print("Collision X")
+//                    print("Collision X")
                     ball.velocity = CGVector(dx: -ball.velocity.dx, dy: ball.velocity.dy)
                 }
                 if ball.position.y - GameConstants.BallRadius < Board.boardBottom && ball.velocity.dy < 0 ||
                     ball.position.y + GameConstants.BallRadius > Board.boardTop && ball.velocity.dy > 0 {
-                    print("Collision Y")
+//                    print("Collision Y")
                     ball.velocity = CGVector(dx: ball.velocity.dx, dy: -ball.velocity.dy)
                 }
                 
@@ -299,7 +312,7 @@ extension Board: GKGameModel {
                     if anotherBall !== ball {
                         if let anotherBall = anotherBall as? FakeBall {
                             if colliding(b1: ball, b2: anotherBall) {
-                                print("\(ball) and \(anotherBall) bounced")
+//                                print("\(ball) and \(anotherBall) bounced")
                                 bounce(b1: ball, b2: anotherBall)
                             }
                         }
@@ -336,7 +349,7 @@ extension Board: GKGameModel {
         var counter1 = 0
         var counter2 = 0
         for ball in pocketedBalls {
-            print("\(ball) is pocketed")
+//            print("\(ball) is pocketed")
             if ball.isNormalBall {
                 if currentPlayer.ballColor == nil {
                     currentPlayer.ballColor = ball.color

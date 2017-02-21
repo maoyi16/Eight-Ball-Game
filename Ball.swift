@@ -32,6 +32,8 @@ protocol Ball:NSCopying {
     
     func update(deltaTime seconds: TimeInterval)
     
+//    var ID: Int {get}
+    
     var velocity:CGVector {get}
     
     var color: BallColor {get}

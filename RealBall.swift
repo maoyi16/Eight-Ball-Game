@@ -21,6 +21,9 @@ class RealBall: GKEntity, Ball {
     }
     let node: SKShapeNode!
     let color: BallColor
+//    let ID: Int
+    static var counter = 0
+    
     static let radius: CGFloat = GameConstants.BallRadius
     
     required init(posX: CGFloat, posY: CGFloat, color: BallColor) {
@@ -40,6 +43,8 @@ class RealBall: GKEntity, Ball {
         node.physicsBody?.angularDamping = 0
         node.physicsBody?.allowsRotation = false
         node.fillColor = colorDict[color]!
+//        ID = RealBall.counter
+//        RealBall.counter += 1
         super.init()
     }
     

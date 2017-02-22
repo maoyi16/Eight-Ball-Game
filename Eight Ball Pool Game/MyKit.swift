@@ -47,3 +47,13 @@ func convertAngle(angle:CGFloat) -> CGFloat {
         return angle
     }
 }
+
+func convertDegree(degree:Int) -> Int {
+    if degree > 180 {
+        return degree - 360
+    } else if degree < -180 {
+        return degree + 360
+    } else {
+        return degree
+    }
+}

@@ -298,11 +298,13 @@ class PoolScene: SKScene {
     }
     
     fileprivate func updateGame() {
+        var someOneWins = false
         if board.pocketedBalls.count == 0 {
             switchPlayer(number: 1)
         } else {
             let (includesCueBall, includesEightBall, includesWrongTargetBall) = checkPocketedBalls()
             if includesEightBall {
+                someOneWins = true
                 if board.currentPlayer.state == .EightBall {
                     print("\(board.currentPlayer!) wins")
                     updateGameInfo(textList: ["\(board.currentPlayer!) wins", "load Menu"])
@@ -330,7 +332,7 @@ class PoolScene: SKScene {
         }
         board.resetPockedBalls()
         PoolScene.gameNeedsUpdate = false
-        if board.currentPlayer.isAI {
+        if !someOneWins && board.currentPlayer.isAI {
             processAIMove()
         }
     }
@@ -400,7 +402,7 @@ class PoolScene: SKScene {
     fileprivate func processAIMove() {
         print("AI's Move")
         if let bestMove = self.AI.bestMoveForActivePlayer() as? Move {
-            //            print(bestMove.impluse)
+            print("Move's angle:\(GLKMathRadiansToDegrees(atan2(Float(bestMove.impluse.dy), Float(bestMove.impluse.dx))))")
             cue.rotateTranslateThanStrike(impluse: bestMove.impluse)
             print("AI finished")
         } else {

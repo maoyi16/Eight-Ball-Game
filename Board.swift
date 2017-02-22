@@ -97,12 +97,18 @@ class Board:NSObject {
                 ang1 = ang2
                 ang2 = t
             }
+            if ang2 - ang1 >= CGFloat(M_PI) {
+                let t = ang1
+                ang1 = ang2
+                ang2 = t + CGFloat(2 * M_PI)
+            }
             
             let  lower = lround(Double(GLKMathRadiansToDegrees(Float(ang1)))) + 1
             let  upper = lround(Double(GLKMathRadiansToDegrees(Float(ang2)))) - 1
             if lower <= upper {
                 for a in lower...upper {
-                    angles_distances.append((a,dist))
+                    let degree = convertDegree(degree: a)
+                    angles_distances.append((degree,dist))
                 }
                 
             }
@@ -122,6 +128,7 @@ class Board:NSObject {
             sigma5 = 4*pow(r,2)*y1
             let ysol1 = (sigma5 - sigma4 + pow(x1,2)*y2 + pow(x2,2)*y2 - sigma3 + pow(y1,2)*y2 + pow(y2,3) - 2*r*x1*sigma1 + 2*r*x2*sigma1 - 2*x1*x2*y2) / sigma2
             let ysol2 = (sigma5 - sigma4 + pow(x1,2)*y2 + pow(x2,2)*y2 - sigma3 + pow(y1,2)*y2 + pow(y2,3) + 2*r*x1*sigma1 - 2*r*x2*sigma1 - 2*x1*x2*y2) / sigma2
+            print("To \(ball2): solution point1: \(CGPoint(x:xsol1,y:ysol1)) solution point2: \(CGPoint(x:xsol2,y:ysol2))")
             var ang1 = angle(p1: CGPoint(x:x1,y:y1), p2: CGPoint(x:xsol1,y:ysol1))
             var ang2 = angle(p1: CGPoint(x:x1,y:y1), p2: CGPoint(x:xsol2,y:ysol2))
             
@@ -131,14 +138,21 @@ class Board:NSObject {
                     ang1 = ang2
                     ang2 = t
                 }
+                if ang2 - ang1 >= CGFloat(M_PI) {
+                    let t = ang1
+                    ang1 = ang2
+                    ang2 = t + CGFloat(2 * M_PI)
+                }
                 
                 let  lower = lround(Double(GLKMathRadiansToDegrees(Float(ang1)))) + 1
                 let  upper = lround(Double(GLKMathRadiansToDegrees(Float(ang2)))) - 1
+                print("To \(ball2): ang1 = \(ang1) ang2= \(ang2) lower = \(lower) upper = \(upper)")
                 if lower <= upper {
                     for a in lower...upper {
-                        let d = computeDistance(ball1: ball1, ball2: ball2, angle: CGFloat(GLKMathDegreesToRadians(Float(a))))
+                        let degree = convertDegree(degree: a)
+                        let d = computeDistance(ball1: ball1, ball2: ball2, angle: CGFloat(GLKMathDegreesToRadians(Float(degree))))
                         if !d.isNaN {
-                            angles_distances.append((a,d))
+                            angles_distances.append((degree,d))
                         }
                     }
                 }
@@ -150,16 +164,35 @@ class Board:NSObject {
     
     
     func validAngles() -> [(angle:CGFloat, distance:CGFloat)] {
+        print("Computing valid angles for \(currentPlayer)")
         var possibleValidAngles_distances = [(Int, distance:CGFloat)]()
         var invalidAngles_distances = [(Int, distance:CGFloat)]()
         for ball in remainingBalls {
             if ball !== cueBall {
-                if currentPlayer.ballColor == nil && ball.color != .White && ball.color != .Black {
-                    possibleValidAngles_distances.append(contentsOf: computeAngle(ball1: cueBall, ball2: ball))
+                if currentPlayer.ballColor == nil && ball.color != currentPlayer.opponent.ballColor && ball.color != .White && ball.color != .Black {
+                    print("Computing valid angles to \(ball)")
+                    let r = computeAngle(ball1: cueBall, ball2: ball)
+                    for t in r {
+                        print(t.0)
+                    }
+                    possibleValidAngles_distances.append(contentsOf: r)
+                    
                 } else if ball.color == currentPlayer.ballColor || ball.color == .Black && currentPlayer.state == .EightBall {
-                    possibleValidAngles_distances.append(contentsOf: computeAngle(ball1: cueBall, ball2: ball))
+                    print("Computing valid angles to \(ball)")
+                    let r = computeAngle(ball1: cueBall, ball2: ball)
+                    for t in r {
+                        print(t.0)
+                    }
+                    possibleValidAngles_distances.append(contentsOf: r)
+
                 } else {
-                    invalidAngles_distances.append(contentsOf: computeAngle(ball1: cueBall, ball2: ball))
+                    print("Computing invalid angles to \(ball)")
+                    let r = computeAngle(ball1: cueBall, ball2: ball)
+                    for t in r {
+                        print(t.0)
+                    }
+                    invalidAngles_distances.append(contentsOf: r)
+
                 }
             }
         }
